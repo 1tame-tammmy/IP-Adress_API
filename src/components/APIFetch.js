@@ -2,7 +2,8 @@ import {useEffect,useState } from "react";
 import "../App.css";
 import Map from './Map';
 import SyncLoader from "react-spinners/ClockLoader";
-import {DateTime} from "./TimeDate";
+import DateTime from "./TimeDate";
+import Flag from "./Flage";
 // import Logo from "../logo.svg";
 
 
@@ -58,6 +59,7 @@ const DataFetch = async () => {
                 <div className="location_container">
                     {/* {api && api.location && api.location.country && (           example for a logic to avoid crashing without waiting for the loading of the api to complete */}
                     {/* <p>Country: {api.location.country}</p>*/}
+                    <Flag country={api.location.country} apii={api}/>
                     <p>Country: {api.location.country}</p>
                     <p>region: {api.location.region}</p>
                     <p>city: {api.location.city}</p>

@@ -2,7 +2,7 @@ import {useEffect,useState } from "react";
 import "../App.css";
 
 
-export function DateTime() {
+export default function DateTime() {
     const [DateTime, setDateTime] = useState(new Date().toLocaleString());
 
     //the useEffect to update the Date time every second
