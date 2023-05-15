@@ -2,6 +2,8 @@ import {useEffect,useState } from "react";
 import "../App.css";
 import Map from './Map';
 import SyncLoader from "react-spinners/ClockLoader";
+import {DateTime} from "./TimeDate";
+// import Logo from "../logo.svg";
 
 
 export default function API_Fetch() {
@@ -46,9 +48,7 @@ const DataFetch = async () => {
 			) : (
                 <>
                 <div className="map_container">
-                    < Map 
-                    api={api} 
-                    location={api && api.location&&(api.location) }
+                    < Map
                     lati ={api && api.location && api.location.lat && (api.location.lat)}
                     lngi ={api && api.location && api.location.lng && (api.location.lng)} />
                 </div>
@@ -63,6 +63,8 @@ const DataFetch = async () => {
                     <p>city: {api.location.city}</p>
                     {api.location.postalCode && <p>postalCode:{api.location.postalCode}</p> }
                     <p>timezone: {api.location.timezone}</p>
+                    {/* <p>using VPN: {api.proxy.vpn === false ? "No" : "Yes"}</p> */}
+                    <DateTime/>
                 </div>
                 </>)}
             </div>
