@@ -3,7 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css';
 import '../App.css';
 import L from 'leaflet';
-import marker from './marker1.gif';
+import marker from '../images/marker1.gif';
 
 
 export default function Map({lngi,lati}) {
@@ -15,7 +15,7 @@ export default function Map({lngi,lati}) {
         iconUrl: marker,
         iconRetinaUrl: marker,
         popupAnchor:  [-0, -0],
-        iconSize: [60,60],
+        iconSize: [62,62],
     
     });
     return (
